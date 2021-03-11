@@ -20,6 +20,7 @@
 
         var tab1= [];
         var tab2= [];
+        var tab3= [];
         var tailltab;
 
         // test de tailltab
@@ -27,9 +28,27 @@
         do {
             tailltab=prompt("Veuillez saisi")
             if (tailltab == "") {
-                
+                alert("Aucune valeur saisi")
+            }else if(isNaN(tailltab)){
+                alert("Ce n'est pas une valeur");
             }
-        } while (tailltab=="");
+        } while (tailltab=="" || isNaN(tailltab))
+
+        for (let i = 0; i < tailltab; i++) {
+
+            //tableau 1
+            var val=Number(prompt("Valeur Tableau 1"));
+            tab1.push(val);
+            
+             //tableau 2
+            val1=Number(prompt("Valeur Tableau 2"));
+            tab2.push(val1)
+
+             //tableau 3
+             tab3.push(val+val1);
+        }
+
+        alert("Tableau1 :"+tab1 + "\n"+"Tableau2 :" + tab2+ "\n"+"Tableau3 :" + tab3);
     </script>
 </body>
 </html>
