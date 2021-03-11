@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+<body>
+    <script>
+        
+        alert("Divinez le nombre");
+        var valAleatoire= Math.floor(Math.random()*11);
+        var valInserer;
+                
+                        // test de valInserer
+            do{
+                valInserer=prompt("Choississez un nombre entre 0 et 10");
+
+                if(valInserer=="")
+                {
+                    alert('Veuillez saisir une valeur dans le champ')
+                }
+                else if(valInserer < 0)
+                {
+                    alert('Veuillez saisir une valeur supérieure à 0')
+                }
+                else if(isNaN(valInserer))
+                {
+                    alert("Vous n'avez pas saisi une valeur numerique")
+                }
+            } 
+            while (valInserer=="" || valInserer < 0 || isNaN(valInserer)); 
+
+            while(valAleatoire!=valInserer)             
+            {
+                alert("Pas de correspondance!")
+                do{
+                    valInserer=prompt("Choississez un nombre entre 0 et 10");
+
+                    if(valInserer=="")
+                    {
+                        alert('Veuillez saisir une valeur dans le champ')
+                    }
+                    else if(valInserer < 0)
+                    {
+                        alert('Veuillez saisir une valeur supérieure à 0')
+                    }
+                    else if(isNaN(valInserer))
+                    {
+                        alert("Vous n'avez pas saisi une valeur numerique")
+                    }
+                }    
+                while (valInserer=="" || valInserer < 0 || isNaN(valInserer));
+            }   
+        
+            alert("Bon travail");
+        
+    </script>
+</body>
+</html>

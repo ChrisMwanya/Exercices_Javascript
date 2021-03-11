@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 7</title>
+</head>
+<body>
+    <script>
+          alert("Calcul de la somme de nombres précédents");
+            var val;
+                 // test  val
+            do{
+                val=Number(prompt("Veuillez saisir un nombre"));
+
+                if(val=="")
+                {
+                    alert('Veuillez saisir une valeur dans le champ')
+                }               
+                else if(isNaN(val))
+                {
+                    alert("Vous n'avez pas saisi une valeur numerique")
+                }
+            } 
+            while (val==""|| isNaN(val));
+
+            var sortie=0;
+            for(var i=val; i>0; i--){
+                sortie += i;
+            }
+
+            alert(sortie);
+    </script>
+</body>
+</html>

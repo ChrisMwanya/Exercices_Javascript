@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+
+        // Avec la fonction recursive
+
+     /*   var sortie;
+
+        function fibonacci(val)
+        {
+            if(val==0 )
+            {
+                return 0;
+            }
+            else if(val==1)
+            {
+                 return 1
+            }else
+            {
+                return fibonacci(val-1)+fibonacci(val-2);
+            }
+        }       
+
+
+        var nombre;
+        do
+        {
+            nombre=prompt('Veuillez saisir un nombre');
+            if(nombre=='')
+            {
+                alert("Vous n'avez rien saisi" );
+            }else if(isNaN(nombre))
+            {
+                alert("Vous n'avez pas saisi un nombre");
+            }
+        } while (isNaN(nombre) || nombre == "");
+         sortie= fibonacci(nombre);
+        alert(sortie);
+
+         // sans la fonction recursive
+        var fibonacci;
+        while(nombre != 1 || nombre != 0)
+        {
+            var val1= nombre - 1
+            var val2= nombre - 2
+
+        }*/
+
+        var nombre= prompt('saisir nombre');
+        var v1=[0,1,1];
+        var val= nombre - 2;
+        var sortie=0;
+        var n=2;
+        if(nombre!=0){
+            for (let i = val; i > 0; i--) {
+            n++;
+            v1.push(v1[n-1]+v1[n-2])                      
+            }  
+            alert(v1);       
+            // for (let j = 0; j < v1.length; j++) {
+            //     sortie =  Number(v1[j]);
+                        
+            // }
+        }      
+
+        // alert(sortie);      // Méthode Emmanuella
+
+        // var Fib=[0,1];
+
+        // for (let i = 1; i < nombre; i++) {
+        //     Fib[i+1] = Fib[i] + Fib[i-1];
+            
+        // }
+       
+
+    </script>
+</body>
+</html>

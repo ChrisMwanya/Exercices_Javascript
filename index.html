@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.D</title>
+</head>
+<body>
+    <script>
+        
+        // var age, nom, prenom;
+
+        // nom= prompt('Veuillez saisir votre nom');        
+        
+        // prenom= prompt(nom +' Veuillez saisir votre prenom');        
+
+        // age=prompt(nom + ' '+ prenom +', Veuillez saisir votre age');
+        
+
+        // var categorie='';
+        // if(age >= 0 && age <= 3 )
+        // {
+        //     categorie='Bébé';
+
+        // }else if(age > 3 && age <= 7 ){
+
+        //     categorie = 'Poussin';
+
+        // }else if(age >= 8 && age <= 11 ){
+
+        //     categorie = 'Minime';
+
+        // }else if(age >= 12 && age <= 17 ){ 
+
+        //     categorie = 'Adolescent';
+
+        // }else if(age >= 18){
+
+        //     categorie = 'Adulte';
+
+        // }else{
+
+        //     categorie='Age incorrect';
+        // }
+
+        // if(age < 0 || age == '')
+        // {
+        //     console.log( 'Bonjour '+ nom + ' '+ prenom + ", vous êtes sur d'etre humain ?");
+        // }else
+        // {
+        //     console.log( 'Bonjour '+ nom + ' '+ prenom + ', vous avez '+ age +' ans et vous êtes '+categorie);
+        // }
+
+
+        // exercise sur le factorielle
+
+           
+
+        var nombre= Number(prompt('saisi un nombre'));
+        
+
+        while(nombre < 0 || nombre > 20){
+            if(nombre < 0)
+            {
+                alert('nombre négatif');
+            }else
+            {
+                alert('Nombre super');
+            }
+
+            nombre=prompt('Veuillez resaisir le nombre');
+        }
+  
+        var sortie=1;   
+                                                    //  Meilleure méthode pour le factoriel
+        for(var i=1; i<=nombre; i++){
+            sortie *=i;
+        }
+   
+        alert(sortie);
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 9</title>
+</head>
+<body>
+    <script>
+        alert("Nombre de notes supérieures à la moyenne");
+        var nombreNotes;
+        var listeNotes=[];
+        do {
+
+            nombreNotes=prompt('Veuilez saisir le nombre de notes à enregistrer');
+                // test de nombreNotes
+            if(nombreNotes < 0)
+            {
+                alert('nombre négatif');
+            }
+            else if(isNaN(nombreNotes)){
+
+                alert("Vous n'avez pas saisi un nombre");
+            }           
+            else if(nombreNotes=='')
+            {
+                alert("Vous n'avez rien saisi");
+            }
+
+        } while (nombreNotes < 0 ||  isNaN(nombreNotes) || nombreNotes=='');
+
+          // enregistrement des notes
+        for (let i = 0; i < nombreNotes; i++) {
+
+            var note;
+            do {
+                note=prompt('Veuilez saisir la note');
+                    // test de la note
+                if(note < 0)
+                {
+                    alert('nombre négatif');
+                }
+                else if(isNaN(note)){
+
+                    alert("Vous n'avez pas saisi un nombre");
+                }           
+                else if(note=='')
+                {
+                    alert("Vous n'avez rien saisi");
+                }
+            } while (note < 0 ||  isNaN(note) || note=='');
+
+              
+            listeNotes.push(note);   
+        }
+        
+            //calcule de la moyenne des notes de la classe
+        var moyenne;
+        
+        var sommeListeNotes=0;
+        for (let i = 0; i < listeNotes.length; i++) {
+            sommeListeNotes += Number(listeNotes[i]); 
+                          
+        }
+
+        moyenne=sommeListeNotes/nombreNotes;        
+
+        // enregistrement des notes supérieures à la moyenne
+
+        var listValeurSupMoyenne=[];
+
+        for (let i = 0; i < listeNotes.length; i++) {                
+            if(listeNotes[i]>moyenne)
+            {
+                listValeurSupMoyenne.push(listeNotes[i]);
+            }
+        }
+        
+        alert(listValeurSupMoyenne);
+    </script>
+</body>
+</html>

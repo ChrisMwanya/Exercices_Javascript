@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+</head>
+<body>
+    <script>
+        var val1, val2;
+
+                    // test  val1
+        do{
+            val1=prompt("Choississez la première valeur");
+
+                if(val1=="")
+                {
+                    alert('Veuillez saisir une valeur dans le champ')
+                }               
+                else if(isNaN(val1))
+                {
+                    alert("Vous n'avez pas saisi une valeur numerique")
+                }
+        } 
+        while (val1==""|| isNaN(val1));
+
+                     // test  val2
+        do{
+            val2=prompt("Choississez la deuxième valeur");
+
+                if(val2=="")
+                {
+                    alert('Veuillez saisir une valeur dans le champ')
+                }               
+                else if(isNaN(val2))
+                {
+                    alert("Vous n'avez pas saisi une valeur numerique")
+                }
+        } 
+        while (val2==""|| isNaN(val2));
+
+        
+        // multiplication
+        alert("Produit :"+ (val1*val2));
+
+        // addition
+        var somme=Number(val1) +Number(val2)
+         alert("Somme :"+somme);
+
+        // soustration
+        alert("Reste :"+ (val1-val2));
+
+        // division
+        alert("Quotien :"+ (val1/val2));
+        
+        
+        
+        
+    </script>
+</body>
+</html>

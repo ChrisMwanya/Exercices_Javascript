@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD2</title>
+</head>
+<body>
+    <script>
+        var valeur, sortie;
+        valeur=prompt('Veuillez saisir un nombre entre 0 et 20');
+
+        if(valeur > 0 && valeur < 10 )
+        {
+            sortie='insuffisant';
+
+        }else if(valeur >= 10 && valeur <= 11 ){
+
+            sortie = 'Passable';
+
+        }else if(valeur >= 12 && valeur <= 13 ){
+
+            sortie = 'assez bien';
+
+        }else if(valeur >= 14 && valeur <= 15 ){
+
+            sortie = 'Bien';
+
+        }else if(valeur >= 16 && valeur <= 20 ){
+
+            sortie = 'Très Bien';
+
+        }else{
+
+            sortie = 'Vous avez saisi un nombre non compris entre 0 et 20';
+        } 
+        
+        console.log(sortie);
+        
+    </script>
+</body>
+</html>

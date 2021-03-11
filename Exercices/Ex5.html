@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+</head>
+<body>
+    <script>
+        alert("Savoir si le produit de deux nombres est positif ou négatif");
+
+        var val1, val2;
+
+                       // test  val1
+        do{
+            val1=prompt("Choississez la première valeur");
+
+                if(val1=="")
+                {
+                    alert('Veuillez saisir une valeur dans le champ')
+                }               
+                else if(isNaN(val1))
+                {
+                    alert("Vous n'avez pas saisi une valeur numerique")
+                }
+        } 
+        while (val1==""|| isNaN(val1));
+
+                       // test  val2
+        do{
+            val2=prompt("Choississez la deuxième valeur");
+
+                if(val2=="")
+                {
+                    alert('Veuillez saisir une valeur dans le champ')
+                }               
+                else if(isNaN(val2))
+                {
+                    alert("Vous n'avez pas saisi une valeur numerique")
+                }
+        } 
+        while (val2==""|| isNaN(val2));
+
+        if((val1 < 0 && val2 < 0) || (val1 > 0 && val2 > 0))
+        {
+            alert("Positif");
+        }
+        else
+        {
+            alert("Négatif");
+        }
+    </script>
+</body>
+</html>
