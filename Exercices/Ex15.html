@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 15</title>
+  </head>
+  <body>
+    <script>
+      // Les habitants d'une ville paient l'impôt selon les règles suivantes :
+      // • les hommes de plus de 20 ans paient l'impôt
+      // • les femmes paient l'impôt si elles ont entre 18 et 35 ans
+      // • les autres ne paient pas d'impôt
+      // Le programme demandera donc l'âge et le sexe de l'habitant, et se
+      // prononcera donc ensuite sur le fait que l'habitant est imposable ou
+      // non.
+
+      var sexe;
+      var age;
+      // test sur le sexe
+      do {
+        sexe = prompt(
+          "Veuillez saisir :" + "\n" + " F pour Femme ou M pour Homme"
+        );
+        if (sexe == "") {
+          alert("Veuillez saisir votre genre");
+        } else if (sexe != "M" && sexe != "F") {
+          alert("Vous n'avez pas choisi le bon genre");
+        }
+      } while (sexe == "" || (sexe != "M" && sexe != "F"));
+
+      // test sur l'age
+      do {
+        age = prompt(
+          "Veuillez saisir votre age");
+        if (age == "") {
+          alert("Veuillez saisir votre age");
+        } else if (age < 0) {
+          alert("Vous n'avez pas saisi une valeur négative");
+        } else if (isNaN(age)) {
+            alert("Veuillez un nombre")
+        }
+      } while (age == "" || age < 0 || isNaN(age));
+
+      if ((sexe == "M" && age > 20) || (sexe == "F" && age > 18 && age < 35)) {
+        alert("Vous est imposable");
+      } else {
+        alert("Vous n'est pas imposable");
+      }
+    </script>
+  </body>
+</html>
