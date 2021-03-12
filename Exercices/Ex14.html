@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 14</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Ecrivez un programme JavaScript permettant de saisir un nombre
-        // déterminé de valeurs dans un tableau . Le programme, une fois la
-        // saisie terminée, renvoie la plus grande valeur en précisant quelle
-        // position elle occupe dans le tableau. On prendra soin d’effectuer la
-        // saisie dans un premier temps, et la recherche de la plus grande
-        // valeur du tableau dans un second temps.
+      // Ecrivez un programme JavaScript permettant de saisir un nombre
+      // déterminé de valeurs dans un tableau . Le programme, une fois la
+      // saisie terminée, renvoie la plus grande valeur en précisant quelle
+      // position elle occupe dans le tableau. On prendra soin d’effectuer la
+      // saisie dans un premier temps, et la recherche de la plus grande
+      // valeur du tableau dans un second temps.
 
-        var tab= [];
-        var tailltab;
+      var tab = [];
+      var tailltab;
+      var grValeur=Number(0);
+      var position;
 
-        // test de tailltab
+      // test de tailltab
 
+      do {
+        tailltab = prompt("Veuillez saisir la taille du tableau");
+        if (tailltab == "") {
+          alert("Aucune valeur saisi");
+        } else if (isNaN(tailltab)) {
+          alert("Ce n'est pas une valeur");
+        }
+      } while (tailltab == "" || isNaN(tailltab));
+
+      if (tailltab < 0) {
+        tailltab = tailltab * -1;
+      }
+
+      // ajout de valeur dans le tableau
+      for (let i = 0; i < tailltab; i++) {
         do {
-            tailltab=prompt("Veuillez saisir la taille du tableau")
-            if (tailltab == "") {
-                alert("Aucune valeur saisi")
-            }else if(isNaN(tailltab)){
-                alert("Ce n'est pas une valeur");
-            }
-        } while (tailltab=="" || isNaN(tailltab))
+          var val = Number(prompt("Valeur "));
+          if (val == "") {
+            alert("Aucune valeur saisi");
+          } else if (isNaN(val)) {
+            alert("Ce n'est pas une valeur");
+          }
+        } while (val == "" || isNaN(val));
+        tab.push(val);
 
-        // ajout de valeur dans le tableau
-        for (let i = 0; i < tailltab; i++) {
-
-            var val=Number(prompt("Valeur Tableau "));
-            tab.push(val);
+        // comparaison de nombre
+        if (val > grValeur) {
+            grValeur=val;
+            position = i;
         }
 
-        //  la plus grande valeur
-        for (let i = 0; i < tab.length; i++) {
-            var grValeur=tab[0];
-            for (let j = 0; j < tab.length; j++) {
-                if (grValeur) {
-                    
-                }
-                
-            }
-            
-        }
+      }
+      alert(tab)
+
+      alert("La grande valeur est :"+grValeur+"\n"+"L'indice est :"+position);
+
+      
+      
+        
     </script>
-</body>
+  </body>
 </html>
