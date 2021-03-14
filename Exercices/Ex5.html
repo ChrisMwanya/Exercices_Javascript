@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 5</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        alert("Savoir si le produit de deux nombres est positif ou négatif");
+      // Ecrire un programme JavaScript qui demande deux nombres à
+      // l’utilisateur et l’informe ensuite si leur produit est négatif ou positif
+      // (on laisse de côté le cas où le produit est nul). Attention toutefois
+      // : on ne doit pas calculer le produit des deux nombres.
+      alert("Savoir si le produit de deux nombres est positif ou négatif");
 
-        var val1, val2;
+      var val1, val2;
 
-                       // test  val1
-        do{
-            val1=prompt("Choississez la première valeur");
+      // test  val1
+      do {
+        val1 = prompt("Choississez la première valeur");
 
-                if(val1=="")
-                {
-                    alert('Veuillez saisir une valeur dans le champ')
-                }               
-                else if(isNaN(val1))
-                {
-                    alert("Vous n'avez pas saisi une valeur numerique")
-                }
-        } 
-        while (val1==""|| isNaN(val1));
-
-                       // test  val2
-        do{
-            val2=prompt("Choississez la deuxième valeur");
-
-                if(val2=="")
-                {
-                    alert('Veuillez saisir une valeur dans le champ')
-                }               
-                else if(isNaN(val2))
-                {
-                    alert("Vous n'avez pas saisi une valeur numerique")
-                }
-        } 
-        while (val2==""|| isNaN(val2));
-
-        if((val1 < 0 && val2 < 0) || (val1 > 0 && val2 > 0))
-        {
-            alert("Positif");
+        if (val1 == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (isNaN(val1)) {
+          alert("Vous n'avez pas saisi une valeur numerique");
         }
-        else
-        {
-            alert("Négatif");
+      } while (val1 == "" || isNaN(val1));
+
+      // test  val2
+      do {
+        val2 = prompt("Choississez la deuxième valeur");
+
+        if (val2 == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (isNaN(val2)) {
+          alert("Vous n'avez pas saisi une valeur numerique");
         }
+      } while (val2 == "" || isNaN(val2));
+
+      // test si positve ou négative
+      if ((val1 < 0 && val2 < 0) || (val1 > 0 && val2 > 0)) {
+        alert("Positif");
+      } else {
+        alert("Négatif");
+      }
     </script>
-</body>
+  </body>
 </html>

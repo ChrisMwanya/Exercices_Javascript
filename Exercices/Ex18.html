@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 18</title>
+</head>
+<body>
+    <script>
+        // Ecrivez un programme qui demande à l’utilisateur de saisir un
+        // nombre, et affiche ensuite sa table de multiplication.À chaque fois ce
+        // nombre va multiplier de 0 à 12
+
+        var nombre;
+        var tab=[];
+
+        alert("Table de multiplication")
+
+        do {
+            nombre=prompt("Veuillez saisir la valeur")
+
+            if (nombre < 0 ) {
+                alert("Valeur négative")
+            } else  if (nombre == "" ){
+               alert("Champs vide") 
+            } else  if (isNaN(nombre)){
+               alert("Vous n'avez pas saisi un nombre") 
+            }
+        } while (nombre < 0 || nombre == "" || isNaN(nombre)); 
+
+        for (let i = 0; i <= 12; i++) {
+            tab.push(nombre*i) ;
+        }
+
+        alert(
+            `Table de Multiplication par `+ nombre+`
+            `+ `0 * `+nombre+` = `+ tab[0] +`
+            `+ `1 * `+nombre+` = `+ tab[1] +`
+            `+ `2 * `+nombre+` = `+ tab[2] +`
+            `+ `3 * `+nombre+` = `+ tab[3] +`
+            `+ `4 * `+nombre+` = `+ tab[4] +`
+            `+ `5 * `+nombre+` = `+ tab[5] +`
+            `+ `6 * `+nombre+` = `+ tab[6] +`
+            `+ `7 * `+nombre+` = `+ tab[7] +`
+            `+ `8 * `+nombre+` = `+ tab[8] +`
+            `+ `9 * `+nombre+` = `+ tab[9] +`
+            `+ `10 * `+nombre+` = `+ tab[10] +`
+            `+ `11 * `+nombre+` = `+ tab[11] +`
+            `+ `12 * `+nombre+` = `+ tab[12] 
+        )
+    </script>
+</body>
+</html>

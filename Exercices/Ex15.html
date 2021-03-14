@@ -32,14 +32,13 @@
 
       // test sur l'age
       do {
-        age = prompt(
-          "Veuillez saisir votre age");
+        age = prompt("Veuillez saisir votre age");
         if (age == "") {
           alert("Veuillez saisir votre age");
         } else if (age < 0) {
           alert("Vous n'avez pas saisi une valeur négative");
         } else if (isNaN(age)) {
-            alert("Veuillez un nombre")
+          alert("Veuillez un nombre");
         }
       } while (age == "" || age < 0 || isNaN(age));
 

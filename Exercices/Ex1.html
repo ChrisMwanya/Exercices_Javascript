@@ -1,91 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise 1</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var libelle, prixHT, nombreArticle, Tva, prixTTC;
+      // Ecrire un programme JavaScript qui demande à l’utilisateur
+      // d’entrer le prix HT d’un article, le nombre d’articles et le taux de la
+      // TVA, et qui fournit le prix TTC correspondant.Faire en sorte que
+      // les libellés apparaissent.
 
-        alert('Calcul du prix de vos article')
+      var libelle, prixHT, nombreArticle, Tva, prixTTC;
 
-                     //  tester de la validité  libelle
-        do 
-        {
-          libelle=prompt("Libellé Article");
-          if(libelle=="")
-          {
-              alert('Veuillez saisir une valeur dans le champ')
-          }
-         
-          else if(!isNaN(libelle))
-          {
-            alert("Vous n'avez pas saisi une valeur alphabetique")
-          }
-        } while (libelle=="" || libelle < 0 || !isNaN(libelle)); 
-        
-                    //  tester de la validité  prixHT
-        do 
-        {
-          prixHT=prompt("le prix de l'article");
-          if(prixHT=="")
-          {
-              alert('Veuillez saisir une valeur dans le champ')
-          }
-          else if(prixHT < 0)
-          {
-            alert('Veuillez saisir une valeur supérieure à 0')
-          }
-          else if(isNaN(prixHT))
-          {
-            alert("Vous n'avez pas saisi une valeur numerique")
-          }
-        } while (prixHT=="" || prixHT < 0 || isNaN(prixHT)); 
+      alert("Calcul du prix de vos article");
 
-             
-                    //  tester de la validité  nombreArticle
+      //  tester de la validité  libelle
+      do {
+        libelle = prompt("Libellé Article");
+        if (libelle == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (!isNaN(libelle)) {
+          alert("Vous n'avez pas saisi une valeur alphabetique");
+        }
+      } while (libelle == "" || libelle < 0 || !isNaN(libelle));
 
-        do 
-        {
-          nombreArticle=prompt("Nombre d'article");
-          if(nombreArticle=="")
-          {
-              alert('Veuillez saisir une valeur dans le champ')
-          }
-          else if(nombreArticle < 0)
-          {
-            alert('Veuillez saisir une valeur supérieure à 0')
-          }
-          else if(isNaN(nombreArticle))
-          {
-            alert("Vous n'avez pas saisi une valeur numerique")
-          }
-        } while (nombreArticle=="" || nombreArticle < 0 || isNaN(nombreArticle)); 
-        
-                //  tester de la validité TVA
-        do 
-        {
-          Tva=prompt("TVA");
-          if(Tva=="")
-          {
-              alert('Veuillez saisir une valeur dans le champ')
-          }
-          else if(Tva < 0)
-          {
-            alert('Veuillez saisir une valeur supérieure à 0')
-          }
-          else if(isNaN(Tva))
-          {
-            alert("Vous n'avez pas saisi une valeur numerique")
-          }
-        } while (Tva=="" || Tva < 0 || isNaN(Tva)); 
-        
-        prixTTC=(prixHT*(1+Tva/100))*nombreArticle
+      //  tester de la validité  prixHT
+      do {
+        prixHT = prompt("le prix de l'article");
+        if (prixHT == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (prixHT < 0) {
+          alert("Veuillez saisir une valeur supérieure à 0");
+        } else if (isNaN(prixHT)) {
+          alert("Vous n'avez pas saisi une valeur numerique");
+        }
+      } while (prixHT == "" || prixHT < 0 || isNaN(prixHT));
 
-        alert("Le prix de vente: "+prixTTC +" TTC")
+      //  tester de la validité  nombreArticle
+
+      do {
+        nombreArticle = prompt("Nombre d'article");
+        if (nombreArticle == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (nombreArticle < 0) {
+          alert("Veuillez saisir une valeur supérieure à 0");
+        } else if (isNaN(nombreArticle)) {
+          alert("Vous n'avez pas saisi une valeur numerique");
+        }
+      } while (
+        nombreArticle == "" ||
+        nombreArticle < 0 ||
+        isNaN(nombreArticle)
+      );
+
+      //  tester de la validité TVA
+      do {
+        Tva = prompt("TVA");
+        if (Tva == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (Tva < 0) {
+          alert("Veuillez saisir une valeur supérieure à 0");
+        } else if (isNaN(Tva)) {
+          alert("Vous n'avez pas saisi une valeur numerique");
+        }
+      } while (Tva == "" || Tva < 0 || isNaN(Tva));
+
+      prixTTC = prixHT * (1 + Tva / 100) * nombreArticle;
+
+      alert("Le prix de vente: " + prixTTC + " TTC");
     </script>
-</body>
+  </body>
 </html>

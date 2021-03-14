@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 13</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Ecrivez un programme JavaScript constituant un tableau, à partir de deux tableaux de
-        // même longueur préalablement saisis. Le nouveau tableau sera la somme des éléments
-        // des deux tableaux de départ.
-        // Tableau 1 :
-        // 4 8 7 9 1 5 4 6
-        // Tableau 2 :
-        // 7 6 5 2 1 3 7 4
-        // Tableau à constituer :
-        // 11 14 12 11 2 8 11 10
+      // Ecrivez un programme JavaScript constituant un tableau, à partir de deux tableaux de
+      // même longueur préalablement saisis. Le nouveau tableau sera la somme des éléments
+      // des deux tableaux de départ.
+      // Tableau 1 :
+      // 4 8 7 9 1 5 4 6
+      // Tableau 2 :
+      // 7 6 5 2 1 3 7 4
+      // Tableau à constituer :
+      // 11 14 12 11 2 8 11 10
 
-        var tab1= [];
-        var tab2= [];
-        var tab3= [];
-        var tailltab;
+      var tab1 = [];
+      var tab2 = [];
+      var tab3 = [];
+      var tailltab;
 
-        // test de tailltab
+      // test de tailltab
 
-        do {
-            tailltab=prompt("Veuillez saisir la taille du tableau")
-            if (tailltab == "") {
-                alert("Aucune valeur saisi")
-            }else if(isNaN(tailltab)){
-                alert("Ce n'est pas une valeur");
-            }
-        } while (tailltab=="" || isNaN(tailltab))
-
-        for (let i = 0; i < tailltab; i++) {
-
-            //tableau 1
-            var val=Number(prompt("Valeur Tableau 1"));
-            tab1.push(val);
-            
-             //tableau 2
-            val1=Number(prompt("Valeur Tableau 2"));
-            tab2.push(val1)
-
-             //tableau 3
-             tab3.push(val+val1);
+      do {
+        tailltab = prompt("Veuillez saisir la taille du tableau");
+        if (tailltab == "") {
+          alert("Aucune valeur saisi");
+        } else if (isNaN(tailltab)) {
+          alert("Ce n'est pas une valeur");
         }
+      } while (tailltab == "" || isNaN(tailltab));
 
-        alert("Tableau1 :"+tab1 + "\n"+"Tableau2 :" + tab2+ "\n"+"Tableau3 :" + tab3);
+      for (let i = 0; i < tailltab; i++) {
+        //tableau 1
+        var val = Number(prompt("Valeur Tableau 1"));
+        tab1.push(val);
+
+        //tableau 2
+        val1 = Number(prompt("Valeur Tableau 2"));
+        tab2.push(val1);
+
+        //tableau 3
+        tab3.push(val + val1);
+      }
+
+      alert(
+        "Tableau1 :" +
+          tab1 +
+          "\n" +
+          "Tableau2 :" +
+          tab2 +
+          "\n" +
+          "Tableau3 :" +
+          tab3
+      );
     </script>
-</body>
+  </body>
 </html>

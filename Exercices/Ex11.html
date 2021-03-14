@@ -1,85 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 11</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Ecrire un programme JavaScript qui déclare un tableau(Array) ,
-        // dont on fait ensuite saisir les valeurs par l’utilisateur.Ce tableau
-        // contient des notes générales du cours de Physique(sur 20).
-        // Trouver la note moyenne des réussites
+      // Ecrire un programme JavaScript qui déclare un tableau(Array) ,
+      // dont on fait ensuite saisir les valeurs par l’utilisateur.Ce tableau
+      // contient des notes générales du cours de Physique(sur 20).
+      // Trouver la note moyenne des réussites
 
+      alert("La moyenne des réussites");
+      var nombreNotes;
+      var listeNotes = [];
+      do {
+        nombreNotes = prompt("Veuilez saisir le nombre de notes à enregistrer");
+        // test de nombreNotes
+        if (nombreNotes < 0) {
+          alert("nombre négatif");
+        } else if (isNaN(nombreNotes)) {
+          alert("Vous n'avez pas saisi un nombre");
+        } else if (nombreNotes == "") {
+          alert("Vous n'avez rien saisi");
+        }
+      } while (nombreNotes < 0 || isNaN(nombreNotes) || nombreNotes == "");
 
-        alert("La moyenne des réussites");
-        var nombreNotes;
-        var listeNotes=[];
+      // enregistrement des notes
+      for (let i = 0; i < nombreNotes; i++) {
+        var note;
         do {
+          note = prompt("Veuilez saisir la note");
+          // test de la note
+          if (note < 0) {
+            alert("nombre négatif");
+          } else if (note > 20) {
+            alert("Nombre supérieur à 20");
+          } else if (isNaN(note)) {
+            alert("Vous n'avez pas saisi un nombre");
+          } else if (note == "") {
+            alert("Vous n'avez rien saisi");
+          }
+        } while (note < 0 || isNaN(note) || note == "" || note > 20);
 
-            nombreNotes=prompt('Veuilez saisir le nombre de notes à enregistrer');
-                // test de nombreNotes
-            if(nombreNotes < 0)
-            {
-                alert('nombre négatif');
-            }
-            else if(isNaN(nombreNotes)){
-
-                alert("Vous n'avez pas saisi un nombre");
-            }           
-            else if(nombreNotes=='')
-            {
-                alert("Vous n'avez rien saisi");
-            }
-
-        } while (nombreNotes < 0 ||  isNaN(nombreNotes) || nombreNotes=='');
-
-          // enregistrement des notes
-        for (let i = 0; i < nombreNotes; i++) {
-
-            var note;
-            do {
-                note=prompt('Veuilez saisir la note');
-                    // test de la note
-                if(note < 0)
-                {
-                    alert('nombre négatif');
-                }
-                else if(note > 20)
-                {
-                    alert('Nombre supérieur à 20');
-                }
-                else if(isNaN(note)){
-
-                    alert("Vous n'avez pas saisi un nombre");
-                }           
-                else if(note=='')
-                {
-                    alert("Vous n'avez rien saisi");
-                }
-            } while (note < 0 ||  isNaN(note) || note=='' || note > 20)
-
-            if(note >= 10)
-            {
-                listeNotes.push(Number(note)); 
-            }
-
+        if (note >= 10) {
+          listeNotes.push(Number(note));
         }
+      }
 
-             //calcule de la moyenne des notes de la classe
-        var moyenne;
-        
-        var sommeListeNotes=0;
-        for (let i = 0; i < listeNotes.length; i++) {
-            sommeListeNotes += Number(listeNotes[i]); 
-                          
-        }
-        
-        moyenne=sommeListeNotes/listeNotes.length; 
+      //calcule de la moyenne des notes de la classe
+      var moyenne;
 
-        alert(moyenne);
+      var sommeListeNotes = 0;
+      for (let i = 0; i < listeNotes.length; i++) {
+        sommeListeNotes += Number(listeNotes[i]);
+      }
+
+      moyenne = sommeListeNotes / listeNotes.length;
+
+      alert(moyenne);
     </script>
-</body>
+  </body>
 </html>

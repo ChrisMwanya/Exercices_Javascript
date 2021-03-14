@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 12</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Ecrivez un programme JavaScript permettant à l’utilisateur de
-        // saisir un nombre quelconque de valeurs, qui devront être stockées
-        // dans un tableau(Array) . L’utilisateur doit donc commencer par
-        // entrer le nombre de valeurs qu’il compte saisir. Il effectuera
-        // ensuite cette saisie. Enfin, une fois la saisie terminée, le
-        // programme affichera le nombre de valeurs négatives et le nombre
-        // de valeurs positives.
+      // Ecrivez un programme JavaScript permettant à l’utilisateur de
+      // saisir un nombre quelconque de valeurs, qui devront être stockées
+      // dans un tableau(Array) . L’utilisateur doit donc commencer par
+      // entrer le nombre de valeurs qu’il compte saisir. Il effectuera
+      // ensuite cette saisie. Enfin, une fois la saisie terminée, le
+      // programme affichera le nombre de valeurs négatives et le nombre
+      // de valeurs positives.
 
-        alert("Les valeurs positives et négatives de ton tableau");
-        var nombreValeur;
-        var tab=[];
+      alert("Les valeurs positives et négatives de ton tableau");
+      var nombreValeur;
+      var tab = [];
+      do {
+        nombreValeur = prompt("Veuilez saisir la taille de votre tableau");
+        // test de nombreNotes
+
+        if (isNaN(nombreValeur)) {
+          alert("Vous n'avez pas saisi un nombre");
+        } else if (nombreValeur == "") {
+          alert("Vous n'avez rien saisi");
+        }
+      } while (isNaN(nombreValeur) || nombreValeur == "");
+
+      for (let i = 0; i < nombreValeur; i++) {
+        var val;
         do {
+          val = prompt("Veuilez saisir la note");
+          // test de la val
+          if (isNaN(val)) {
+            alert("Vous n'avez pas saisi un nombre");
+          } else if (val == "") {
+            alert("Vous n'avez rien saisi");
+          }
+        } while (isNaN(val) || val == "");
 
-            nombreValeur=prompt('Veuilez saisir la taille de votre tableau');
-                // test de nombreNotes
-            
-            if(isNaN(nombreValeur)){
+        tab.push(Number(val));
+      }
 
-                alert("Vous n'avez pas saisi un nombre");
-            }           
-            else if(nombreValeur=='')
-            {
-                alert("Vous n'avez rien saisi");
-            }
+      var nbrePositif = 0,
+        nbreNegatif = 0;
 
-        } while (isNaN(nombreValeur) || nombreValeur=='')
-
-        for (let i = 0; i < nombreValeur; i++)
-        {
-            var val;
-            do {
-                val=prompt('Veuilez saisir la note');
-                    // test de la val
-                if(isNaN(val)){
-
-                    alert("Vous n'avez pas saisi un nombre");
-                }           
-                else if(val=='')
-                {
-                    alert("Vous n'avez rien saisi");
-                }
-            } while (isNaN(val) || val=='')
-
-          tab.push(Number(val));
+      for (let i = 0; i < tab.length; i++) {
+        if (tab[i] > 0) {
+          nbrePositif++;
+        } else if (tab[i] < 0) {
+          nbreNegatif++;
         }
+      }
 
-        var nbrePositif = 0, nbreNegatif = 0;
-
-        for (let i = 0; i < tab.length; i++) {
-            if (tab[i] > 0) {
-               nbrePositif++ ;
-            } 
-            else if(tab[i] < 0)
-            {
-                nbreNegatif++;
-            }           
-        }
-
-        alert("Nombre de valeur positives :"+ nbrePositif+"\n"+"Nombre de valeur négative :"+nbreNegatif);
-
+      alert(
+        "Nombre de valeur positives :" +
+          nbrePositif +
+          "\n" +
+          "Nombre de valeur négative :" +
+          nbreNegatif
+      );
     </script>
-</body>
+  </body>
 </html>

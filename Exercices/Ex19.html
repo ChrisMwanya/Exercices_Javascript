@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 19</title>
+  </head>
+  <body>
+    <script>
+      // Ecrivez un programme javascript qui demande à Javascript de saisir
+      // la taille du tableau.Ensuite il lui sera demandé de remplir ce tableau
+      // en saisissant les valeurs à partir du clavier.Puis il doit créer un
+      // nouveau tableau qui va contenir le carré des nombres du tableau
+      // précédemment créé.
+
+      var tailleTab;
+      var tab1 = [],
+        tab2 = [];
+
+      // test de tailleTab
+      alert("Double du tableau");
+      do {
+        tailleTab = prompt("Veuillez saisir la taille du tableau");
+        if (tailleTab < 0) {
+          alert("Valeur Négative");
+        } else if (tailleTab == "") {
+          alert("Champ vide");
+        } else if (isNaN(tailleTab)) {
+          alert("Veuillez saisir un nombre");
+        }
+      } while (tailleTab < 0 || tailleTab == "" || isNaN(tailleTab));
+
+      for (let i = 0; i < tailleTab; i++) {
+        var val;
+        // test de val
+        do {
+          val = prompt("Veuillez saisir la taille du tableau");
+          if (val < 0) {
+            alert("Valeur Négative");
+          } else if (val == "") {
+            alert("Champ vide");
+          } else if (isNaN(val)) {
+            alert("Veuillez saisir un nombre");
+          }
+        } while (val < 0 || val == "" || isNaN(val));
+
+        // remplissage tableau
+        tab1.push(val);
+        // remplissage du tableau de carrée de nombre
+        tab2.push(val**2);
+      }
+
+    alert("[ "+tab1+" ]"+"\n"+"[ "+tab2+" ]")
+    </script>
+  </body>
+</html>

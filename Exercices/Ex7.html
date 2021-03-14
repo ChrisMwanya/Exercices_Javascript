@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 7</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-          alert("Calcul de la somme de nombres précédents");
-            var val;
-                 // test  val
-            do{
-                val=Number(prompt("Veuillez saisir un nombre"));
+      // Ecrire un programme JavaScript qui demande un nombre de
+      // départ, et qui calcule la somme des entiers jusqu’à ce nombre.
+      // Par exemple, si l’on entre 5, le programme doit calculer : 1 + 2 + 3
+      // + 4 + 5 = 15
+      // NB : on souhaite afficher uniquement le résultat
+      alert("Calcul de la somme de nombres précédents");
+      var val;
+      // test  val
+      do {
+        val = Number(prompt("Veuillez saisir un nombre"));
 
-                if(val=="")
-                {
-                    alert('Veuillez saisir une valeur dans le champ')
-                }               
-                else if(isNaN(val))
-                {
-                    alert("Vous n'avez pas saisi une valeur numerique")
-                }
-            } 
-            while (val==""|| isNaN(val));
+        if (val == "") {
+          alert("Veuillez saisir une valeur dans le champ");
+        } else if (isNaN(val)) {
+          alert("Vous n'avez pas saisi une valeur numerique");
+        }
+      } while (val == "" || isNaN(val));
 
-            var sortie=0;
-            for(var i=val; i>0; i--){
-                sortie += i;
-            }
+      var sortie = 0;
+      for (var i = val; i > 0; i--) {
+        sortie += i;
+      }
 
-            alert(sortie);
+      alert(sortie);
     </script>
-</body>
+  </body>
 </html>

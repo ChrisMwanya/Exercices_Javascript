@@ -12,6 +12,44 @@
       // de mois et d'année à l'utilisateur, renvoie s'il s'agit ou non d'une date
       // valide.
       
+      alert("Verification date ");
+      var jour, annee;
+
+      // test jour
+      do {
+        jour=prompt("Veuillez saisir le numéro du jour");
+
+        if (jour < 0) {
+          alert("Vous avez saisi une valeur négative")
+        }else if(jour == "")
+        {
+          alert("Champs de saisi vide")
+        }else if(isNaN(jour)){
+          alert("Veuillez saisir un nombre")
+        }
+      } while (jour < 0 || jour == "" || isNaN(jour));
+
+      // test de la date
+
+      do {
+        annee=prompt("Veuillez saisir l'année");
+
+        if (annee < 0) {
+          alert("Vous avez saisi une valeur négative")
+        }else if(annee == "")
+        {
+          alert("Champs de saisi vide")
+        }else if(isNaN(annee)){
+          alert("Veuillez saisir un nombre")
+        }
+      } while (annee < 0 || annee == "" || isNaN(annee));
+
+      // verification de la date
+      if ((jour > 0 && jour < 31) && (annee >= 1950 || annee < 2100)) {
+        alert("Date valide")
+      } else {
+        alert("Date invalide")
+      }
     </script>
   </body>
 </html>

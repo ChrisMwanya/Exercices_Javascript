@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercice 8</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-          var nombre;
-         do {
+      // Ecrire un programme JavaScript qui demande un nombre de
+      // départ, et qui calcule sa factorielle.
+      var nombre;
 
-            nombre=prompt('Veuilez saisir un nombre');
-            
-            if(nombre < 0)
-            {
-                alert('nombre négatif');
-            }else if(isNaN(nombre)){
-                alert("Vous n'avez pas un nombre");
-            }
-            else if(nombre > 20)
-            {
-                alert('Nombre supererieur à 20');
-            }
-            else if(nombre=='')
-            {
-                alert("Vous n'avez rien saisi");
-            }
+      //   test sur le nombre
+      do {
+        nombre = prompt("Veuilez saisir un nombre");
 
-         } while (nombre < 0 || nombre > 20 || isNaN(nombre) || nombre=='');
-
-
-        var sortie=1;   
-                                                    //  Meilleure méthode pour le factoriel
-        for(var i=1; i<=nombre; i++){
-            sortie *=i;
+        if (nombre < 0) {
+          alert("nombre négatif");
+        } else if (isNaN(nombre)) {
+          alert("Vous n'avez pas un nombre");
+        } else if (nombre > 20) {
+          alert("Nombre supererieur à 20");
+        } else if (nombre == "") {
+          alert("Vous n'avez rien saisi");
         }
-   
-        alert(sortie);
+      } while (nombre < 0 || nombre > 20 || isNaN(nombre) || nombre == "");
 
+      var sortie = 1;
+      //  Meilleure méthode pour le factoriel
+      for (var i = 1; i <= nombre; i++) {
+        sortie *= i;
+      }
+
+      alert(sortie);
     </script>
-</body>
+  </body>
 </html>

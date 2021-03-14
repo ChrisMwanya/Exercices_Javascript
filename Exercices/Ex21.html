@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 21</title>
+</head>
+<body>
+    <script>
+        // Ecrivez un programme javascript qui demande à l’utilisateur de saisir
+        // un mot à partir du clavier et va ensuite, va vérifier si ce mot existe
+        // dans le dictionnaire préalablement créé dans le programme.
+
+        var mot;
+        // dictionnaire dans le programme
+        var tab=[
+            "Toto",
+            "Titi",
+            "Arsène",
+            "Arthur"
+        ];
+        // test sur le mot
+        do {
+            mot= prompt("Veuillez saisir un mot")
+           if (mot == "") {
+               alert("Veuillez saisir un mot")
+           } 
+        } while (mot == "");
+
+        // verification dans le dictionnaire
+
+        for (let i = 0; i < tab.length; i++) {            
+            if (mot==tab[i]) {
+               alert("Ce mot existe") 
+               break;
+            }else if (i == (tab.length-1)) {
+                alert("Ce mot n'existe pas") 
+            }
+        }
+    </script>
+</body>
+</html>

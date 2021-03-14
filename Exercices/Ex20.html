@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 20</title>
+</head>
+<body>
+    <script>
+        // Ecrivez un programme javascript qui demande à l’utilisateur d’entrer
+        // à partir du clavier la taille d’un tableau et demandera ensuite à
+        // l’utilisateur de remplir ce tableau.
+        // Enfin l’utilisateur devrait afficher un autre tableau contenant les
+        // valeurs du tableau dans l’ordre inverse.
+
+        var tailleTab;
+      var tab1 = [],
+        tab2 = [];
+
+      // test de tailleTab
+      alert("Inverse du tableau");
+      do {
+        tailleTab = prompt("Veuillez saisir la taille du tableau");
+        if (tailleTab < 0) {
+          alert("Valeur Négative");
+        } else if (tailleTab == "") {
+          alert("Champ vide");
+        } else if (isNaN(tailleTab)) {
+          alert("Veuillez saisir un nombre");
+        }
+      } while (tailleTab < 0 || tailleTab == "" || isNaN(tailleTab));
+
+      for (let i = 0; i < tailleTab; i++) {
+        var val;
+        // test de val
+        do {
+          val = prompt("Veuillez saisir la taille du tableau");
+          if (val < 0) {
+            alert("Valeur Négative");
+          } else if (val == "") {
+            alert("Champ vide");
+          } else if (isNaN(val)) {
+            alert("Veuillez saisir un nombre");
+          }
+        } while (val < 0 || val == "" || isNaN(val));
+
+        // remplissage tableau
+        tab1.push(val);
+        // remplissage du tableau inversé
+        tab2[tailleTab-i-1]= val;
+      }
+
+      alert("[ "+tab1+" ]"+"\n"+"[ "+tab2+" ]")
+    </script>
+</body>
+</html>
