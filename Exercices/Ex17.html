@@ -24,7 +24,50 @@
         // perdu dans cet exercice, on pourra réfléchir un peu et s'apercevoir qu'il est plus simple qu'il en a l'air (cela s'appelle faire
         // une analyse !)
 
-        var age, temps,
+        var age, temps, nbrAccident;
+        // test age
+        do {
+            age = prompt("Veuillez saisir votre age");
+
+            if (age < 0) {
+                alert("Valeur négative")
+            } else if (age == "") {
+                alert("Champ vide");
+            }else if (isNaN(age)) {
+                alert("N'est pas un nombre")
+            }
+
+        } while (age < 0 || age == "" || isNaN(age));
+
+        // test temps
+        do {
+            temps = prompt("Vous avez votre permis depuis combien de temps?");
+
+            if (temps < 0) {
+                alert("Valeur négative")
+            } else if (temps == "") {
+                alert("Champ vide");
+            }else if (isNaN(temps)) {
+                alert("N'est pas un nombre")
+            }
+
+        } while (temps < 0 || temps == "" || isNaN(temps));
+
+        // test nbrAccident
+        do {
+            nbrAccident = prompt("Vous avez eu à jour ?");
+
+            if (nbrAccident < 0) {
+                alert("Valeur négative")
+            } else if (nbrAccident == "") {
+                alert("Champ vide");
+            }else if (isNaN(nbrAccident)) {
+                alert("N'est pas un nombre")
+            }
+
+        } while (nbrAccident < 0 || nbrAccident == "" || isNaN(nbrAccident));
     </script>
+
+    
 </body>
 </html>
